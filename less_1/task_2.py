@@ -10,10 +10,8 @@
 """
 
 sec = int(input("Введите время в секундах: "))
-sec = sec % (24 * 3600)
-hour = sec // 3600
-sec %= 3600
-minim = sec // 60
-sec %= 60
+hour = float(sec // 3600)
+minut = float(sec // 60)
 
-print(f"Время в формате ч:м:с - {hour} : {minim} : {sec}")
+print(f"Время в формате ч:м:с - {hour} : {minut} : {sec}")
+

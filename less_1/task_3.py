@@ -8,7 +8,7 @@ n + nn + nnn = 369
 """
 
 n = input("Введите целое число от 1 до 10: ")
-n2 = str(n + n)
-n3 = str(n + n + n)
+n2 = (n + n)
+n3 = (n + n + n)
 res = int(n) + int(n2) + int(n3)
 print(f"Результат равен: , {res}")

@@ -15,7 +15,7 @@ lst = [1, 2, 3]
 print(int(a))
 print(str(b))
 print(lst)
-name = str(input("Ведите ваше имя: "))
+name = input("Ведите ваше имя: ")
 age = int(input("Ваш возраст? "))
 val = int(input("Введите число от 1 до 10 "))
 print(name, "в ваши", age, "лет пора знать цифры и побольше")
