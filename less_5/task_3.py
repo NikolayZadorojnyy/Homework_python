@@ -18,14 +18,16 @@
 """
 
 
-def charOut(i, n):
-    if i > n: # выход из рекурсии
+def char_out(i, n):
+    if i > n:  # выход из рекурсии
         return
-    print(f'{i}\t{chr(i)}')
-    charOut(i + 1, n) # шаг рекурсии
+    print("%4d-%s" % (i, chr(i)), end='')
+    if i % 10 == 0:
+        print()
+    char_out(i + 1, n)  # шаг рекурсии
 
 
 start = 32
 finish = 127
 
-charOut(start, finish)
+char_out(start, finish)

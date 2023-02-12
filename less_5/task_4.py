@@ -11,7 +11,7 @@ import random  # Добавляем модуль для  рандомного ч
 secret_number = random.randint(1, 100)  # Создаем это число в промежутке 1<=a<=100
 
 
-def guesstheNum(sec_num, i=0):
+def guess_the_num(sec_num, i=0):
     if i == 10:  # выход из рекурсии
         return print("Вы исчерпали 10 попыт0к, загаданное число:", sec_num)
     our_num = int(input('Ваше число: '))
@@ -21,7 +21,7 @@ def guesstheNum(sec_num, i=0):
         print('Больше!')
     elif our_num == sec_num:
         return print('Вы угадали! Попыток: ', i + 1)
-    guesstheNum(sec_num, i + 1)  # шаг рекурсии
+    guess_the_num(sec_num, i + 1)  # шаг рекурсии
 
 
-guesstheNum(secret_number)
+guess_the_num(secret_number)
