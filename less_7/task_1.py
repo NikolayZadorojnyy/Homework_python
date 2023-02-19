@@ -16,16 +16,15 @@ class Road:
     # удельная масса 1кв.м. дорожного полотна толщиной 1 см (тонн)
     _surface_spec_gravity: float = 0.025
 
-    def __init__(self, length: float, width: float):
+    def __init__(self, length: float, width: float, thickness: float):
         self._length = float(length)
         self._width = float(width)
+        self._thickness = float(thickness)  # толщина покрытия в метрах
 
-    # thickness толщина покрытия в метрах
-    def get_surface_gravity(self, thickness: float):
+    def get_surface_gravity(self):
         return (self._length * self._width
-                * thickness * self._surface_spec_gravity)
+                * self._thickness * self._surface_spec_gravity)
 
 
-road = Road(5000, 20)
-print('Масса дорожного покрытия составит:',
-      road.get_surface_gravity(0.05), 'тонн')
+road = Road(5000, 20, 0.05)
+print('Масса дорожного покрытия составит:',road.get_surface_gravity(), 'тонн')
