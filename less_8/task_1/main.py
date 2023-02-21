@@ -71,7 +71,7 @@ def get_data():
 
 
 def write_to_csv(file_name):
-    with open(file_name, 'w') as f_t:  # создаем и открываем файл csv на запись
+    with open(file_name, 'w', encoding="utf-8") as f_t:  # создаем и открываем файл csv на запись
         wrtie_csv = csv.writer(f_t, delimiter=',')  # разделитель запятая
         data = get_data()
         for i in data:
