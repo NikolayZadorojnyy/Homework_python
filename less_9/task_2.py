@@ -38,7 +38,7 @@ class Road(metaclass=Singleton):
 road = Road(5000, 20, 0.05)
 road1 = Road(1000, 10, 0.01)
 # ссылки на объекты одинаковые
-print('Патерн Singleton => объект 1 равен объекту 2?:', road == road1)
+print('Патерн Singleton => объект 1 равен объекту 2?:', road is road1)
 print('Масса:', road.get_surface_gravity(), 'тонн', 'Ссылка на объект 1:', road)
 print('Масса:', road1.get_surface_gravity(), 'тонн', 'Ссылка на объект 2:', road1)
 
@@ -60,6 +60,6 @@ class Road1:
 road = Road1(5000, 20, 0.05)
 road1 = Road1(1000, 10, 0.01)
 # ссылки на объекты разные
-print('Без патерна Singleton => объект 1 равен объекту 2?:', road == road1)
+print('Без патерна Singleton => объект 1 равен объекту 2?:', road is road1)
 print('Масса:', road.get_surface_gravity(), 'тонн', 'Ссылка на объект 1:', road)
 print('Масса:', road1.get_surface_gravity(), 'тонн', 'Ссылка на объект 2:', road1)
